@@ -1,10 +1,9 @@
 package edu.mx.utt.ciclos;
 
-public class Serie {
-
+public class Serie  {
     // variable de instancia
     private int n;
-
+    //Clase-identificador-=-new Costructor();
     // contructor
     public Serie() {
         this.n = 1;
@@ -33,10 +32,10 @@ public class Serie {
         for (int i = 1; i <= this.n; i++) {
             r+=constante/i;
         }
-        return 0.0;
+        return r;
     }
 
-    public double calcularWhilw(){
+    public double calcularWhile(){
         double r = 0.0;
         double constante=1.0;
         double i=1;
@@ -44,7 +43,19 @@ public class Serie {
             r+=constante/i;
             i++;
         }
-        return 0.0;
+        return r;
+    }
+
+    public double calcularDoWhile(){
+        int i=1;
+        double r=0.0;
+        double constante=1.0;
+        do {
+            r+=constante/i;
+            i++;
+        } while (i <= this.n);
+
+        return r;
     }
 
     @Override
